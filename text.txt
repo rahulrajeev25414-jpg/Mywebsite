@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Nasrin ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Cormorant Garamond',serif;
+}
+
+body{
+background:#080814;
+color:white;
+overflow-x:hidden;
+}
+
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+position:relative;
+background:
+radial-gradient(circle at top,#2d1b69,#080814 70%);
+}
+
+.stars{
+position:absolute;
+width:100%;
+height:100%;
+overflow:hidden;
+}
+
+.star{
+position:absolute;
+color:white;
+animation:twinkle 4s infinite;
+}
+
+@keyframes twinkle{
+50%{opacity:.3}
+}
+
+.hero-content{
+z-index:2;
+padding:20px;
+}
+
+.hero h1{
+font-size:4rem;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:1.3rem;
+margin-bottom:25px;
+}
+
+.btn{
+padding:15px 35px;
+border:none;
+border-radius:40px;
+background:#ff5ea8;
+color:white;
+font-size:1rem;
+cursor:pointer;
+}
+
+.section{
+padding:80px 20px;
+max-width:900px;
+margin:auto;
+}
+
+.card{
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(10px);
+padding:30px;
+border-radius:25px;
+border:1px solid rgba(255,255,255,.1);
+}
+
+input{
+width:100%;
+padding:15px;
+margin:20px 0;
+border-radius:10px;
+border:none;
+}
+
+.photo{
+width:100%;
+border-radius:20px;
+margin-top:25px;
+}
+
+.hidden{
+display:none;
+}
+
+.end{
+text-align:center;
+padding:100px 20px;
+}
+
+.cats{
+font-size:70px;
+margin:20px 0;
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero" id="landing">
+<div class="stars" id="stars"></div>
+
+<div class="hero-content">
+<h1>For Nasrin ❤️</h1>
+
+<p>
+Four Months.<br>
+Countless Memories.<br>
+Infinite Love.
+</p>
+
+<button class="btn" onclick="showPassword()">
+Enter Our World
+</button>
+</div>
+</section>
+
+<section class="section hidden" id="passwordSection">
+<div class="card">
+<h2>🔐 Secret Entrance</h2>
+
+<p>
+Every beautiful story deserves a secret door.
+</p>
+
+<input
+type="password"
+id="password"
+placeholder="Enter Password">
+
+<button class="btn" onclick="checkPassword()">
+Open My Heart ❤️
+</button>
+
+<p id="error"></p>
+</div>
+</section>
+
+<section class="section hidden" id="content">
+
+<div class="card">
+<h2>💌 My Dearest Nasrin</h2>
+
+<p style="margin-top:20px;line-height:1.9;">
+Happy 4th Month Anniversary ❤️
+
+Thank you for loving me through my mistakes,
+forgiving me when I fall short,
+and staying beside me through everything.
+
+You are my comfort,
+my happiness,
+and my favorite person.
+
+Every memory we create becomes one of my
+favorite memories.
+
+If I could choose again,
+I would still choose you.
+
+Again.
+And again.
+And again.
+
+Forever Yours,
+
+❤️ Rahul
+</p>
+</div>
+
+<div style="height:40px"></div>
+
+<div class="card">
+<h2>📸 Our Memory</h2>
+
+<img src="nasrin.jpg" class="photo">
+
+<p style="margin-top:20px;text-align:center;">
+One of my favorite memories with
+my favorite person ❤️
+</p>
+</div>
+
+</section>
+
+<section class="end hidden" id="ending">
+<div class="cats">🐈‍⬛ ❤️ 🐈</div>
+
+<h2>
+Happy 4th Month Anniversary
+</h2>
+
+<p style="margin-top:20px;">
+June 5th ❤️
+</p>
+
+<p style="margin-top:20px;">
+Out of everyone in this world,
+I would still choose you.
+</p>
+</section>
+
+<script>
+
+for(let i=0;i<80;i++){
+let star=document.createElement("div");
+star.className="star";
+star.innerHTML="✦";
+star.style.left=Math.random()*100+"%";
+star.style.top=Math.random()*100+"%";
+star.style.animationDelay=Math.random()*5+"s";
+document.getElementById("stars").appendChild(star);
+}
+
+function showPassword(){
+document.getElementById("landing").style.display="none";
+document.getElementById("passwordSection").classList.remove("hidden");
+}
+
+function checkPassword(){
+
+const pass=document.getElementById("password").value;
+
+if(pass==="1024"){
+document.getElementById("passwordSection").style.display="none";
+document.getElementById("content").classList.remove("hidden");
+document.getElementById("ending").classList.remove("hidden");
+}
+else{
+document.getElementById("error").innerHTML="Wrong password ❤️";
+}
+}
+</script>
+
+</body>
+</html>
